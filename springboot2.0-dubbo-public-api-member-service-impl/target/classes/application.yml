@@ -1,0 +1,19 @@
+server:
+  port: 9002
+
+dubbo:
+  application:
+  ###########注册到注册中心的名称############
+    name: member
+  ###########采用协议和端口号################
+  protocol:
+  ###########采用dubbo协议####################
+    name: dubbo
+  ###########发布dubbo端口号为20880###########
+    port: 20881
+  registry:
+  ###########注册中心地址#####################
+    address: zookeeper://192.168.50.128:2181
+  scan:
+  ############实现类扫包范围###################
+    base-packages: com.xiaotao.api.member.impl
